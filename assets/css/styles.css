@@ -4,13 +4,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300; /* Adjust the font weight to be a little wider */
     scroll-behavior: smooth;
 }
 
 /* Body */
 body {
-    background-color: #f8f9fa; /* Lightest Gray */
+    background-color: #e0f7fa; /* Light Blue */
     color: #495057; /* Dark Gray */
     min-height: 100vh;
     overflow-y: scroll;
@@ -55,7 +55,7 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff; /* White */
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400; /* Adjust the font weight to be a little wider */
     padding: 10px 15px;
     transition: 0.3s ease-in-out;
     border-radius: 5px;
@@ -82,7 +82,7 @@ nav ul li a:hover {
 #home {
     text-align: center;
     padding: 80px 20px;
-    background: url('/home/sigma-lord/Documents/MyBharatTrip/assets/images/bg.jpg') no-repeat center center/cover;
+    background: url('/assets/images/bg.jpg') no-repeat center center/cover;
     color: #ffffff; /* White */
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ nav ul li a:hover {
 
 #home h1 {
     font-size: 4rem;
-    font-weight: 300;
+    font-weight: 400; /* Adjust the font weight to be a little wider */
     text-transform: uppercase;
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-in-out;
@@ -179,7 +179,7 @@ button {
     padding: 12px 20px;
     border: none;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400; /* Adjust the font weight to be a little wider */
     cursor: pointer;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
@@ -246,16 +246,12 @@ button:hover {
         transition: 0.3s;
     }
 
-    .hamburger.active .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active .line:nth-child(2) {
-        opacity: 0;
-    }
-
+    /* Remove the cross (X) effect from the hamburger menu */
+    .hamburger.active .line:nth-child(1),
+    .hamburger.active .line:nth-child(2),
     .hamburger.active .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: none;
+        opacity: 1;
     }
 
     #home h1 {
@@ -273,4 +269,10 @@ button:hover {
     section p {
         font-size: 1.2rem;
     }
+}
+
+.hamburger.active,
+nav.active {
+    background-color: lightblue;
+    font-weight: 600; /* Adjust the font weight to make it a little wider */
 }
